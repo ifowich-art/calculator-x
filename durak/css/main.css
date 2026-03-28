@@ -1,0 +1,42 @@
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #1c1e21;
+    --primary-color: #007AFF; /* Синий как в iOS/MAX */
+    --secondary-color: #34C759; /* Зеленый */
+    --table-color: #2E7D32; /* Цвет сукна карточного стола */
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    max-width: 480px; /* Ограничиваем ширину для десктопа, чтобы выглядело как мобилка */
+    margin: 0 auto;
+    min-height: 100vh;
+    overflow: hidden; /* Запрещаем скролл страницы */
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active { transform: scale(0.98); opacity: 0.8; }
+.btn-primary { background-color: var(--primary-color); color: white; }
+.btn-secondary { background-color: var(--secondary-color); color: white; }
+.btn-outline { background-color: transparent; border: 2px solid #ccc; color: #555; }
+.btn-small { padding: 8px 12px; border-radius: 8px; border: none; background: rgba(0,0,0,0.5); color: white; }
+
+.btn-group { display: flex; flex-direction: column; gap: 12px; width: 100%; padding: 0 20px; }
